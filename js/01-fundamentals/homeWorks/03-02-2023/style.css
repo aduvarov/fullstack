@@ -5,3 +5,8 @@
 .string__head {
     text-align: center;
 }
+
+.number__text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: justify;
+}
