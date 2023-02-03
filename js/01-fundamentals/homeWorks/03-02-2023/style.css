@@ -1,3 +1,7 @@
-.boolean__text {
+.string__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.string__head {
+    text-align: center;
 }
