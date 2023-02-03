@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
     <head>
-        <link rel="stylesheet" href=./style.css">
+        <link rel="stylesheet" href="./style.css" />
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -92,5 +92,134 @@
             только объектам, сразу после того, как узнаем больше про основы
             JavaScript.
         </p>
+        <table class="table">
+            <tr class="table__head">
+                <td>Оригинальное значение</td>
+                <td>Преобразованно в Number</td>
+                <td>Преобразованно в String</td>
+                <td>Преобразованно в Boolean</td>
+            </tr>
+            <br />
+            <tr>
+                <td>false</td>
+                <td>0</td>
+                <td>"false"</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>true</td>
+                <td>1</td>
+                <td>"true"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>0</td>
+                <td>"0"</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>"1"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>"0"</td>
+                <td>0</td>
+                <td>"0"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>"1"</td>
+                <td>1</td>
+                <td>"1"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>"NaN"</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>infinity</td>
+                <td>infinity</td>
+                <td>"infinity"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>""</td>
+                <td>0</td>
+                <td>""</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>"17"</td>
+                <td>17</td>
+                <td>"17"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>"test"</td>
+                <td>NaN</td>
+                <td>"test"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>[]</td>
+                <td>0</td>
+                <td>""</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>[17]</td>
+                <td>17</td>
+                <td>"17"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>[17,18]</td>
+                <td>NaN</td>
+                <td>"17,18"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>["test"]</td>
+                <td>NaN</td>
+                <td>"test"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>{}</td>
+                <td>NaN</td>
+                <td>"[object Object]"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>{key:"test"}</td>
+                <td>NaN</td>
+                <td>"[object Object]"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>function(){}</td>
+                <td>NaN</td>
+                <td>"function(){}"</td>
+                <td>true</td>
+            </tr>
+            <tr>
+                <td>null</td>
+                <td>0</td>
+                <td>"null"</td>
+                <td>false</td>
+            </tr>
+            <tr>
+                <td>undefined</td>
+                <td>NaN</td>
+                <td>"undefined"</td>
+                <td>false</td>
+            </tr>
+        </table>
     </body>
 </html>
