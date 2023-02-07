@@ -36,12 +36,7 @@ if (side1 === side2) {
     }
 } else if (side1 === side3) {
     alert('Это равнобедренный треугольник');
-} else {
-    alert('Это разносторонний треугольник');
-}
-
-if (side2 === side3) {
-} else if (side2 === side1) {
+} else if (side2 === side3) {
     alert('Это равнобедренный треугольник');
 } else {
     alert('Это разносторонний треугольник');
