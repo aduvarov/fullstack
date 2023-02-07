@@ -20,11 +20,11 @@ let side1 = +prompt('Введите размер 1 стороны');
 let side2 = +prompt('Введите размер 2 стороны');
 let side3 = +prompt('Введите размер 3 стороны');
 
-if (side1 > side2 + side3) {
+if (side1 >= side2 + side3) {
     alert('Сторона не должна превышать сумму двух других');
-} else if (side2 > side1 + side3) {
+} else if (side2 >= side1 + side3) {
     alert('Сторона не должна превышать сумму двух других');
-} else if (side3 > side2 + side1) {
+} else if (side3 >= side2 + side1) {
     alert('Сторона не должна превышать сумму двух других');
 }
 
