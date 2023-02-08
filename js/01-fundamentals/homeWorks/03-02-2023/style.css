@@ -1,3 +1,8 @@
+body {
+
+    text-align: justify;
+}
+
 td {
     width: 100px;
     height: 100px;
@@ -5,10 +10,6 @@ td {
 
 .string__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.string__head {
-    text-align: center;
 }
 
 .number__text {
