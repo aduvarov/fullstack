@@ -10,20 +10,39 @@
 let hour = +prompt('Который сейчас час');
 let minuts = +prompt('Сколько минут');
 
-if ((hour >= 23 && hour <= 24) || (hour >= 1 && hour < 5)) {
-    if (minuts <= 59) {
+if (hour == 23 || (hour >= 0 && hour <= 5)) {
+    if (hour == 5 && minuts <= 29) {
+        document.write('Cейчас ночь');
+    } else if (hour === 23 && minuts >= 30 && minuts <= 59) {
+        document.write('Cейчас ночь');
+    } else if (hour !== 5 && hour !== 23 && minuts <= 59) {
         document.write('Cейчас ночь');
     }
-} else if (hour >= 5 && hour < 12) {
-    if (minuts <= 59) {
+}
+if (hour >= 5 && hour <= 12) {
+    if (hour == 5 && minuts >= 30 && minuts <= 59) {
+        document.write('Cейчас утро');
+    } else if (hour === 12 && minuts <= 29) {
+        document.write('Cейчас утро');
+    } else if (hour !== 5 && hour !== 12 && minuts <= 59) {
         document.write('Cейчас утро');
     }
-} else if (hour >= 12 && hour < 17) {
-    if (minuts <= 59) {
+}
+if (hour >= 12 && hour <= 17) {
+    if (hour == 12 && minuts >= 30 && minuts <= 59) {
+        document.write('Cейчас день');
+    } else if (hour == 17 && minuts <= 29) {
+        document.write('Cейчас день');
+    } else if (hour !== 12 && hour !== 17 && minuts <= 59) {
         document.write('Cейчас день');
     }
-} else if (hour >= 17 && hour < 23) {
-    if (minuts <= 59) {
+}
+if (hour >= 17 && hour <= 23) {
+    if (hour == 17 && minuts >= 30) {
         document.write('Cейчас вечер');
+    } else if (hour == 23 && minuts <= 29) {
+        document.write('Cейчас вечер');
+    } else if (hour !== 17 && hour !== 23 && minuts <= 59) {
+        document.write('Cейчас день');
     }
 }
