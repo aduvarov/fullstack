@@ -3,7 +3,7 @@
 //'Иванов П. Г.'  Необходимо использовать indexOf и lastIndexOf
 'use strict';
 
-let srcString = 'Иванов Пётр Григорьевич';
+let srcString = 'Уваров Анатолий Дмитриевич';
 let result = fullName(srcString);
 console.log(result);
 

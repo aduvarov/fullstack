@@ -2,7 +2,7 @@
 //Написать программу, которая подсчитывает, сколько содержится любых цифр в строке.
 
 let number = 0;
-let str = '01234567re89';
+let str = '0124345644447rasdfa4sdfasdfe89';
 
 for (let index = 0; index < str.length; index++) {
     if (isNaN(+str[index]) == false) {

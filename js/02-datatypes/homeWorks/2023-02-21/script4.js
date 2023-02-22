@@ -4,7 +4,7 @@
 // функция должна возвращать '// Объявляем переменную для имени'
 'use strict';
 
-let srcString = `userName = 'Vasya' // Объявляем переменную для имени`;
+let srcString = `userName = 'Vasyasdfa'`;
 let result = searchCom(srcString);
 console.log(result);
 

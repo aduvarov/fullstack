@@ -1,7 +1,7 @@
 //Четные и нечетные символы разделить по разным строкам
 // Создайте из четных символов строки srcString строку dstString1 и из нечетных символов - строку dstString2.
 'use strict';
-let originalString = '0123456789';
+let originalString = '0a1b2c3d4e5f6g7h8g9k';
 
 let result = reverseString(originalString);
 
