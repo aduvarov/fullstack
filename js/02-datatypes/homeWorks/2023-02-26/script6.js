@@ -12,6 +12,8 @@ function array(linearArray) {
         if (linearArray[index] == linearArray[index1]) {
             if (linearArray[index1] == linearArray[index1 + 1]) {
                 return true;
+            } else {
+                return false;
             }
         }
     }
