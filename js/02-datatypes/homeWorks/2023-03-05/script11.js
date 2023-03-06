@@ -9,28 +9,17 @@ let temp = [];
 for (let count = -40; count <= 40; count++) {
     temp.push(count);
 }
-
+let index2 = 0;
 let tempForen = temp.map(modify);
-
+document.write('<h1>Переведнные значения градусов Цельсия в градусы Форенгенйта</h1>');
 document.write('<table border=1>');
-document.write('Переведенные значения градусов цельсия в форенгейта');
-document.write('<tr>');
-for (let index = 1; index <= 20; index++) {
-    document.write('<td>' + tempForen[index] + '</td>');
-}
-document.write('<tr>');
-for (let index = 21; index <= 40; index++) {
-    document.write('<td>' + tempForen[index] + '</td>');
-}
-document.write('<tr>');
-for (let index = 41; index <= 60; index++) {
-    document.write('<td>' + tempForen[index] + '</td>');
-}
-document.write('<tr>');
-for (let index = 61; index <= 80; index++) {
-    document.write('<td>' + tempForen[index] + '</td>');
-}
 
+document.write('<td>Градусы Цельсия</td>');
+document.write('<td>Градусы Форенгейта</td>');
+for (let index = -40; index <= 40; index++) {
+    document.write('<tr><td>' + index + '</td>' + '<td>' + tempForen[index2] + '</td></tr>');
+    index2 = index2 + 1;
+}
 document.write('</table>');
 
 function modify(element) {
