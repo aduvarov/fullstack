@@ -8,10 +8,15 @@
 let date1 = new Date('11/14/2021 00:01');
 let date2 = new Date('11/14/2021 00:01');
 
-if (date1 > date2) {
-    document.write('date1 > date2');
-} else if (date1 < date2) {
-    document.write('date1 < date2');
-} else if (date1 === date2) {
-    document.write('date1 === date2');
+document.write(compare_dates(date1, date2));
+// new Date('11/14/2021 00:01'), new Date('12/14/2021 00:00'))
+
+function compare_dates(date1, date2) {
+    if (date1 > date2) {
+        return 'date1 > date2';
+    } else if (date1 < date2) {
+        return 'date1 < date2';
+    } else {
+        return 'date1 = date2';
+    }
 }

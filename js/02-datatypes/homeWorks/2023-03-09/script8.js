@@ -1,24 +1,32 @@
 'use strict';
+// Написать функцию которая текущую дату и возвращает массив из двух строк с датами начала и конца недели в формате ISO
+// для даты 2023-03-08 возвращает ['2023-03-06', '2023-03-12']
 
-// По данным числам n и m заполните двумерный массив размером n×m числами от 1 до n×m “змейкой”, как показано в примере. Выведите полученный массив, отводя на вывод каждого элемента ровно 4 символа.
+let now = new Date('2023-03-15');
+let day = now.getDay();
+let result = startAndLastDayWeek(now, day);
+console.log(result);
 
-// заполните двумерный массив 10 на 10 числами от 0 до 99 змейкой.
-// [
-// [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-// [19, 18, 17, 16, 15, 14, 13, 12, 11, 10],
-// [20, 21, 22, 23, 24, 25, 26, 27, 28, 29],
-// и т.д. до 99
-// ]
-let table = [];
-for (let row = 0; row < 1; row++) {
-    table.push([]);
-    for (let col = 0; col < 10; col++) {
-        table[row].push(col);
+function startAndLastDayWeek(now, day) {
+    let result = [];
+    let num = 0;
+    let num2 = 0;
+    for (let index = 1; day > index; day--) {
+        num++;
     }
-    table.push([]);
+    day = now.getDay();
+    for (let index = 7; day < index; day++) {
+        num2++;
+    }
+    now = new Date('2023-03-15');
+    now.setDate(now.getDate() - num);
+    let startWeek = now.toISOString('YYYY - MM - DD');
+    startWeek = startWeek.split('T')[0];
+    result.push(startWeek);
+    now = new Date('2023-03-15');
+    now.setDate(now.getDate() + num2);
+    let lastDay = now.toISOString('YYYY - MM - DD');
+    lastDay = lastDay.split('T')[0];
+    result.push(lastDay);
+    return result;
 }
-for (let row = 0; row < 1; row++) {
-    table.push([]);
-}
-
-console.log(table);
