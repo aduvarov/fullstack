@@ -50,16 +50,11 @@ function averageSalary(staff) {
 let result3 = minSalary(staff);
 console.log(result3);
 function minSalary(staff) {
-    let averageSalary = 0;
-    for (let index = 0; index < staff.length; index++) {
-        averageSalary = averageSalary + staff[index].salary;
-    }
-    averageSalary = Math.trunc(averageSalary / staff.length);
-    let minSalary;
+    let lastName;
     let manLowSalary = [];
     for (let index = 0; index < staff.length; index++) {
-        if (staff[index].salary <= averageSalary) {
-            minSalary = staff[index].lastName;
+        if (staff[index].salary <= 200) {
+            lastName = staff[index].lastName;
             manLowSalary.push(minSalary);
         }
     }
