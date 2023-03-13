@@ -15,7 +15,7 @@ let str = 0;
 let result = countStrValues(obj); // 5
 function countStrValues(obj) {
     for (let index in obj) {
-        if (typeof index === String) {
+        if (typeof obj[index] === 'string') {
             str++;
         }
     }
