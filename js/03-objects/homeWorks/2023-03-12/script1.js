@@ -50,12 +50,20 @@ function averageSalary(staff) {
 let result3 = minSalary(staff);
 console.log(result3);
 function minSalary(staff) {
-    let minSalary = 0;
+    let averageSalary = 0;
     for (let index = 0; index < staff.length; index++) {
-        minSalary = minSalary + staff[index].salary;
+        averageSalary = averageSalary + staff[index].salary;
     }
-    minSalary = Math.trunc(minSalary / staff.length);
-    return minSalary;
+    averageSalary = Math.trunc(averageSalary / staff.length);
+    let minSalary;
+    let manLowSalary = [];
+    for (let index = 0; index < staff.length; index++) {
+        if (staff[index].salary <= averageSalary) {
+            minSalary = staff[index].lastName;
+            manLowSalary.push(minSalary);
+        }
+    }
+    return manLowSalary;
 }
 
 // написать функцию которая принимает массив сотрудников высчитывает общую зп и возвращает её . //17150
