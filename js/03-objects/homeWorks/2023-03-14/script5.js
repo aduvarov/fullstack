@@ -271,5 +271,5 @@ let shopDB = [
 console.log(filterGender(shopDB, 'Womens'));
 
 function filterGender(db, gender) {
-    return shopDB.filter(product => (product.gender == gender ? true : false));
+    return db.filter(product => (product.gender == gender ? true : false));
 }

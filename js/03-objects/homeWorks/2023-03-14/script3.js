@@ -272,5 +272,5 @@ let shopDB = [
 console.log(filterHighPrice(shopDB, 400));
 
 function filterHighPrice(db, price) {
-    return shopDB.filter(product => (product.price > price ? true : false));
+    return db.filter(product => (product.price > price ? true : false));
 }
