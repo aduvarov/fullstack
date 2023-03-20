@@ -15,7 +15,7 @@ let safe = {
             if (this[cassete] === 0) {
                 return console.log('Error: такой купюры нет');
             }
-            this[cassete] = 0;
+            this[cassete] = this[cassete] - 1;
             return true;
         } else {
             return false;
