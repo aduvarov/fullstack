@@ -8,5 +8,5 @@ function circleLengthandArea(radius) {
     let pi = Math.PI.toFixed(2);
     let l = 2 * pi * radius;
     let s = pi * radius ** 2;
-    return `длина окружности: ${l}, площадь круга: ${s}`;
+    return { circleLength: l.toFixed(1), circleArea: s.toFixed(1) };
 }
