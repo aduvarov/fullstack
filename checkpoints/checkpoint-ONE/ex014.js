@@ -7,6 +7,6 @@ let outsideR = 7;
 let internalR = 4;
 
 function sCircle(c1, c2) {
-    let s = Math.PI.toFixed(2) * (c1 * 2 - c2 * 2);
+    let s = Math.PI.toFixed(2) * (c1 ** 2 - c2 ** 2);
     return s;
 }
