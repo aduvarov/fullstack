@@ -15,11 +15,9 @@ function searchFlat(flat) {
             for (let allFlat = 1; allFlat <= 6; allFlat++) {
                 number = number + 1;
                 if (number === flat) {
+                    return { floor: floor, entrance: entrance };
                 }
             }
         }
     }
 }
-let floorFlat = flat / 6;
-
-return { floor: floor, entrance: entrance, floorFlat: floor };
