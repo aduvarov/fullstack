@@ -13,9 +13,10 @@ let a = 5;
 let b = 7;
 let c = 6;
 let d = 4;
-
-if (c - a === 1 || d - b === 1) {
-    console.log(true);
-} else {
-    console.log(false);
+if (a <= 8 && b <= 8 && c <= 8 && d <= 8) {
+    if (c - a === 1 || d - b === 1) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
 }
