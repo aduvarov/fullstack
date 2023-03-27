@@ -10,6 +10,7 @@ let num = 11;
 
 while (num >= 11 && num <= 30) {
     for (let index = 11; index <= 30; index++) {
+        num = num + 1;
         console.log(index);
     }
 }
