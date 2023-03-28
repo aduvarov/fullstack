@@ -10,7 +10,7 @@
 let a = 205;
 let b = 50;
 
-function nod(a, b) {
+function squareInRectangle(a, b) {
     let count = 0;
     while (a != 0 && b != 0) {
         if (a >= b) {
