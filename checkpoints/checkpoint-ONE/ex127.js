@@ -9,18 +9,15 @@ let reshka = 0;
 
 function randomCoin(orel, reshka) {
     let rnd = 0;
-    for (let index = 0; index < 10000; index++) {
-        rnd = randomInteger(1, 2);
-        if (rnd === 1) {
-            orel++;
-        } else {
-            reshka++;
-        }
+    rnd = randomInteger(1, 2);
+    if (rnd === 1) {
+        return 'orel';
+    } else {
+        return 'reshka';
     }
-    return `${orel} ${reshka}`;
 }
 
-function randomInteger() {
-    let rand = 1 + Math.random() * (2 + 1 - 1);
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
