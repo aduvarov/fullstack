@@ -18,13 +18,14 @@ function interval(a, b, n) {
     let c = 1;
     let arr = [];
     numbers.sort(compareNumbers);
-    for (let index = 0; index < 100; index++)
+    for (let index = 0; index < 100; index++) {
         if (numbers[index] === numbers[index + 1]) {
             c = c + 1;
         } else {
             arr.push(c);
             c = 1;
         }
+    }
     let longerInterval = 0;
     for (let index = 0; index < arr.length; index++) {
         if (arr[index] < arr[index + 1]) {
