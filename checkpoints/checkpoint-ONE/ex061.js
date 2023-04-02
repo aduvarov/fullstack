@@ -12,6 +12,8 @@ if (holeW - brickW >= 0 && holeL - brickH >= 0) {
     return true;
 } else if (holeW - brickL >= 0 && holeL - brickH >= 0) {
     return true;
+} else if (holeL - brickW >= 0 && holeL - brickL >= 0) {
+    return true;
 } else {
     return false;
 }
