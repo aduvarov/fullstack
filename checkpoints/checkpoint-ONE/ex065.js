@@ -4,7 +4,7 @@
 let day = 30;
 
 function freeDayAndWeekDay(day) {
-    if (day % 7 === 6 || day % 7 === 7 || day % 7 === 0) {
+    if (day % 7 === 6 || day % 7 === 0) {
         return 'выходной';
     } else {
         return 'рабочий';
