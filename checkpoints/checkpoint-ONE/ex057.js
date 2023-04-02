@@ -11,9 +11,9 @@ let b = 7;
 let c = 8;
 
 function inequality(a, b, c) {
-    if (a < b < c) {
+    if (a < b && b < c) {
         return { 'a < b < c': true, 'b > a > c': false };
-    } else if (a > b > c) {
+    } else if (b > a && a > c) {
         return { 'a < b < c': false, 'b > a > c': true };
     } else {
         return { 'a < b < c': false, 'b > a > c': false };
