@@ -17,7 +17,7 @@ let n = 45;
 // }
 // document.write('</table>');
 
-function str(n) {
+function strTable(n) {
     let str = 1;
     for (let count = 0; count < n; count++) {
         if (n - 5 > 0) {
