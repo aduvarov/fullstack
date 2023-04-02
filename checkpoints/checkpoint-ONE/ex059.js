@@ -16,6 +16,13 @@ function postcardInEnvelope(envelopeLength, envelopeWidth, postcardLength, postc
         } else {
             return false;
         }
+    }
+    if (envelopeLength - postcardLength >= 2) {
+        if (envelopeWidth - postcardWidth >= 2) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
         return false;
     }
