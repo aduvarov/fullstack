@@ -4,12 +4,12 @@
 // в час, другая – в метрах в секунду. Вычислить какая из скоростей больше?
 // Функция принимает два параметра (кмч, мс) и возвращает цифру 1 если скорость больше в кмч или 2 если скорость больше в мс.
 
-let num = 323;
-let num2 = 23;
+let speed = 323;
+let speed2 = 23;
 
-function number(num, num2) {
-    num = Math.trunc(num / 3.6);
-    if (num > num2) {
+function checkSpeed(speed, speed2) {
+    speed = Math.trunc(speed / 3.6);
+    if (speed > speed2) {
         return 1;
     } else {
         return 2;
