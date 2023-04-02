@@ -10,8 +10,8 @@ let num2 = 233;
 
 function number(num, num2) {
     if (num > num2) {
-        return { num2: num2, num: num };
+        return [num2, num];
     } else {
-        return { num: num, num2: num2 };
+        return [num, num2];
     }
 }
