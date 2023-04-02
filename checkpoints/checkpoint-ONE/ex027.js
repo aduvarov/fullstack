@@ -3,8 +3,9 @@
 // Склад обслуживается роботом. Определить, в какой секции и на каком ярусе робот должен взять товар, находящийся на месте с заданным номером.
 
 let product = 16;
-let number = 0;
+
 function searchProduct(product) {
+    let number = 0;
     for (let tier = 1; tier <= 10; tier++) {
         for (let section = 1; section <= 8; section++) {
             for (let place = 0; place < 15; place++) {
