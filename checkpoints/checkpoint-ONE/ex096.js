@@ -7,10 +7,10 @@
 // result number
 
 let mileage = 10;
-let summa = 0;
+let summa = 10;
 
 for (let count = 1; count <= 7; count++) {
     mileage = mileage * 0.1 + mileage;
     summa = summa + mileage;
 }
-console.log(summa);
+console.log(summa.toFixed(1));

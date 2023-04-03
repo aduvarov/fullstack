@@ -9,7 +9,7 @@
 let site = 100;
 let barleyYield = 20;
 
-let summa = 0;
+let summa = 20;
 
 for (let count = 1; count <= 7; count++) {
     site = site * 0.05 + site;
