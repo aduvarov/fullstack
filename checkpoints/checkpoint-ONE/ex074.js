@@ -10,15 +10,30 @@ let dateOfBirth = new Date('2005-08-10');
 function humanAge(dateOfBirth) {
     let yearBirth = dateOfBirth.getFullYear();
     let monthBirth = dateOfBirth.getMonth() + 1;
+    let dayOfBirth = dateOfBirth.getDate();
     let now = new Date();
     let monthNow = now.getMonth() + 1;
     let yearNow = now.getFullYear();
+    let dayNow = now.getDate();
     let years = 0;
+    if (monthBirth === monthNow) {
+        if (dayOfBirth < dayNow) {
+            years = yearNow - yearBirth;
+            console.log(years);
+        } else if (dayOfBirth > dayNow) {
+            years = yearNow - yearBirth;
+            console.log(years);
+        } else {
+            years = yearNow - yearBirth;
+            console.log(years);
+        }
+    }
     if (monthBirth < monthNow) {
         years = yearNow - yearBirth;
-        return years;
-    } else {
+        console.log(years);
+    }
+    if (monthBirth > monthNow) {
         years = yearNow - yearBirth - 1;
-        return years;
+        console.log(years);
     }
 }
