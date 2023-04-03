@@ -6,11 +6,8 @@
 // а) оператора цикла с предусловием;
 // б) оператора цикла с постусловием
 
-let num = 11;
-
-while (num >= 11 && num <= 30) {
-    for (let index = 11; index <= 30; index++) {
-        num = num + 1;
-        console.log(index);
-    }
-}
+let num = 10;
+do {
+    console.log(num);
+    num = num + 1;
+} while (num >= 10 && num <= 30);
