@@ -11,11 +11,9 @@ let count = 0;
 
 document.write('<table border="1">');
 for (let row = 0; row < 10; row++) {
-    for (let col = 0; col < 1; col++) {
-        num = num + 9;
-        count = count + 1;
-        document.write(`<td> ${count} x 9 = ${num}</td>`);
-    }
+    num = num + 9;
+    count = count + 1;
+    document.write(`<td> ${count} x 9 = ${num}</td>`);
     document.write('</tr>');
 }
 document.write('</table>');
