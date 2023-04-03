@@ -3,12 +3,13 @@
 //произведение всех целых чисел от a до b (значения a и b
 // вводятся с клавиатуры; b ≥ a)
 
-let a = 2;
-let b = 5;
+let a = +prompt('Введите первое число');
+let b = +prompt('Введите второе число');
 
 let mult = 1;
-
-for (let count = a; count <= b; count++) {
-    mult = mult * count;
+if (b >= a) {
+    for (let count = a; count <= b; count++) {
+        mult = mult * count;
+    }
 }
 console.log(mult);
