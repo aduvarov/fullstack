@@ -14,7 +14,7 @@ let b = 7;
 let c = 6;
 let d = 4;
 if (a <= 8 && b <= 8 && c <= 8 && d <= 8) {
-    if (c - a === d - b) {
+    if (Math.abs(c - a) === Math.abs(d - b)) {
         console.log(true);
     } else {
         console.log(false);
