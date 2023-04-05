@@ -54,25 +54,23 @@ function prevalentWindDirection(obj) {
             obj.averageWindSpeed = medSpeed;
         }
     }
-}
-function minimumWindDecade() {
     let month = {
         decade1: [5, 3, 7, 3, 4, 1, 2, 4, 2, 2],
         decade2: [3, 3, 4, 4, 5, 3, 3, 3, 2, 3],
         decade3: [5, 4, 3, 1, 2, 3, 3, 1, 4, 6, 4],
     };
     let sum = [];
-    let summa;
-    let nod;
+    let summa1;
+    let nod1;
     for (let key in month) {
-        summa = 0;
+        summa1 = 0;
         month[key].forEach(element => {
-            summa = summa + element;
+            summa1 = summa1 + element;
             return key;
         });
-        nod = Math.trunc(summa / month[key].length);
-        month[key] = nod;
-        sum.push(nod);
+        nod1 = Math.trunc(summa1 / month[key].length);
+        month[key] = nod1;
+        sum.push(nod1);
     }
 
     let minDecade = sum[0];
