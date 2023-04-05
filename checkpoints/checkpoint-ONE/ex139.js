@@ -10,7 +10,7 @@ let b = 30;
 let n = 2;
 
 function interval(a, b, n) {
-    if (n > a + b) {
+    if (n > b - a + 1) {
         return [];
     }
     let numbers = [];
