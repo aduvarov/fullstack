@@ -26,8 +26,8 @@ function dropoutRate(orel, reshka) {
             reshka++;
         }
     }
-    orel = orel / 100;
-    reshka = reshka / 100;
+    orel = orel.toString()[0] + orel.toString()[1];
+    reshka = reshka.toString()[0] + reshka.toString()[1];
     return { orel: `${orel}%`, reshka: `${reshka}%` };
 }
 

@@ -47,12 +47,12 @@ function dropoutRate(side1, side2, side3, side4, side5, side6) {
             side6++;
         }
     }
-    side1 = side1 / 100;
-    side2 = side2 / 100;
-    side3 = side3 / 100;
-    side4 = side4 / 100;
-    side5 = side5 / 100;
-    side6 = side6 / 100;
+    side1 = side1.toString()[0] + side1.toString()[1];
+    side2 = side2.toString()[0] + side2.toString()[1];
+    side3 = side3.toString()[0] + side3.toString()[1];
+    side4 = side4.toString()[0] + side4.toString()[1];
+    side5 = side5.toString()[0] + side5.toString()[1];
+    side6 = side6.toString()[0] + side6.toString()[1];
 
     return {
         side1: `${side1}%`,
