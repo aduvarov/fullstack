@@ -26,5 +26,5 @@ function longestStretch(m) {
             best = counter[index];
         }
     }
-    return ${best} ;
+    return best;
 }
