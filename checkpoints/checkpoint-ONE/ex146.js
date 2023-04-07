@@ -9,9 +9,6 @@ let b = 100;
 let n = 100;
 
 function interval(a, b, n) {
-    if (n > a + b) {
-        return [];
-    }
     let numbers = [];
     let rnd;
     for (let index = 0; index < n; index++) {
@@ -19,9 +16,9 @@ function interval(a, b, n) {
         numbers.push(rnd);
     }
     let result = [];
-    for (let str of numbers) {
-        if (!result.includes(str)) {
-            result.push(str);
+    for (let uniqueNum of numbers) {
+        if (!result.includes(uniqueNum)) {
+            result.push(uniqueNum);
         }
     }
     return result;
