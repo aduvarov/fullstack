@@ -15,7 +15,7 @@ let bandit = {
         let rnd;
         let fruit;
         for (let index = 1; index <= 3; index++) {
-            rnd = randomInteger(1, 8);
+            rnd = randomInteger(0, 8);
             fruit = this.cylinder1[rnd];
             result.push(fruit);
         }
