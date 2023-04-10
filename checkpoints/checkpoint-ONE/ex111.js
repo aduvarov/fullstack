@@ -13,6 +13,7 @@ do {
     num = num + 1;
 } while (num >= 10 && num <= 30);
 
+num = 10;
 while (num >= 10 && num <= 30) {
     console.log(num);
     num += 1;
