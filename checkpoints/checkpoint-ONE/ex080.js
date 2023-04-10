@@ -8,17 +8,22 @@
 let m = 3;
 
 function cardSuits(m) {
-    if (m >= 1 && m <= 4) {
-        if (m === 1) {
-            return 'пики';
-        } else if (m === 2) {
-            return 'трефы';
-        } else if (m === 3) {
-            return 'бубны';
-        } else if (m === 4) {
-            return 'червы';
-        }
-    } else {
+    if (m < 1 || m > 4) {
         return 'не больше 4 и не меньше 1';
     }
+    switch (m) {
+        case 1:
+            m = 'пики';
+            break;
+        case 2:
+            m = 'трефы';
+            break;
+        case 3:
+            m = 'бубны';
+            break;
+        case 4:
+            m = 'черви';
+            break;
+    }
+    return m;
 }

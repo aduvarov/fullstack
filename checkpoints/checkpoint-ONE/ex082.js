@@ -14,41 +14,55 @@ let k = 10;
 let m = 4;
 
 function suitAndDignity(k, m) {
-    if (m >= 1 && m <= 4) {
-        if (m === 1) {
-            m = 'пики';
-        } else if (m === 2) {
-            m = 'трефы';
-        } else if (m === 3) {
-            m = 'буби';
-        } else if (m === 4) {
-            m = 'черви';
-        }
-    } else {
+    if (m < 1 || m > 4) {
         return 'не больше 4 и не меньше 1';
     }
-    if (k >= 6 && k <= 14) {
-        if (k === 11) {
-            k = 'валет';
-        } else if (k === 12) {
-            k = 'дама';
-        } else if (k === 13) {
-            k = 'король';
-        } else if (k === 14) {
-            k = 'туз';
-        } else if (k === 10) {
-            k = 'десять';
-        } else if (k === 9) {
-            k = 'девять';
-        } else if (k === 8) {
-            k = 'восемь';
-        } else if (k === 7) {
-            k = 'семь';
-        } else if (k === 6) {
-            k = 'шесть';
-        }
-    } else {
+    if (k < 6 || k > 14) {
         return 'не больше 14 и не меньше 6';
+    }
+    switch (m) {
+        case 1:
+            m = 'пики';
+            break;
+        case 2:
+            m = 'трефы';
+            break;
+        case 3:
+            m = 'бубны';
+            break;
+        case 4:
+            m = 'черви';
+            break;
+    }
+
+    switch (k) {
+        case 11:
+            k = 'валет';
+            break;
+        case 12:
+            k = 'дама';
+            break;
+        case 13:
+            k = 'король';
+            break;
+        case 14:
+            k = 'туз';
+            break;
+        case 10:
+            k = 'десять';
+            break;
+        case 9:
+            k = 'девять';
+            break;
+        case 8:
+            k = 'восемь';
+            break;
+        case 7:
+            k = 'семь';
+            break;
+        case 6:
+            k = 'шесть';
+            break;
     }
     return `${k} ${m} `;
 }

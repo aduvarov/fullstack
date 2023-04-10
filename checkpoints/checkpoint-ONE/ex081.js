@@ -10,27 +10,27 @@
 let k = 3;
 
 function sequentialNum(k) {
-    if (k >= 6 && k <= 14) {
-        if (k === 11) {
-            return 'валет';
-        } else if (k === 12) {
-            return 'дама';
-        } else if (k === 13) {
-            return 'король';
-        } else if (k === 14) {
-            return 'туз';
-        } else if (k === 10) {
-            return 'десять';
-        } else if (k === 9) {
-            return 'девять';
-        } else if (k === 8) {
-            return 'восемь';
-        } else if (k === 7) {
-            return 'семь';
-        } else if (k === 6) {
-            return 'шесть';
-        }
-    } else {
+    if (k < 6 || k > 14) {
         return 'не больше 14 и не меньше 6';
+    }
+    switch (k) {
+        case 11:
+            return 'валет';
+        case 12:
+            return 'дама';
+        case 13:
+            return 'король';
+        case 14:
+            return 'туз';
+        case 10:
+            return 'десять';
+        case 9:
+            return 'девять';
+        case 8:
+            return 'восемь';
+        case 7:
+            return 'семь';
+        case 6:
+            return 'шесть';
     }
 }
