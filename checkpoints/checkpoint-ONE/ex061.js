@@ -8,12 +8,21 @@ let brickH = 14;
 let holeW = 30;
 let holeL = 20;
 
-if (holeW - brickW >= 0 && holeL - brickH >= 0) {
-    return true;
-} else if (holeW - brickL >= 0 && holeL - brickH >= 0) {
-    return true;
-} else if (holeL - brickW >= 0 && holeL - brickL >= 0) {
-    return true;
+if (
+    brickW <= holeW &&
+    brickL <= holeL &&
+    brickL <= holeW &&
+    brickW <= holeL &&
+    brickW <= holeW &&
+    brickH <= holeL &&
+    brickH <= holeW &&
+    brickW <= holeL &&
+    brickH <= holeW &&
+    brickL <= holeL &&
+    brickL <= holeW &&
+    brickH <= holeL
+) {
+    console.log('Кирпич пройдет в отверстие.');
 } else {
-    return false;
+    console.log('Кирпич не пройдет в отверстие.');
 }
