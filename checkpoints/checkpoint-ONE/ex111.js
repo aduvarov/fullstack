@@ -7,7 +7,13 @@
 // б) оператора цикла с постусловием
 
 let num = 10;
+
 do {
     console.log(num);
     num = num + 1;
 } while (num >= 10 && num <= 30);
+
+while (num >= 10 && num <= 30) {
+    console.log(num);
+    num += 1;
+}
