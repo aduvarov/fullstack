@@ -7,8 +7,7 @@
 
 let cage = 1;
 let amoebas = [];
-for (let count = 3; count <= 24; count++) {
-    count = count + 2;
+for (let count = 3; count <= 24; count += 3) {
     cage = cage * 2;
     amoebas.push(cage);
 }
