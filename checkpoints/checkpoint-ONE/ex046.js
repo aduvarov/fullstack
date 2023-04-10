@@ -12,9 +12,10 @@ function areaCircleAndSquare(triangleS, circleS) {
     let pi = Math.PI.toFixed(2);
     let radiusCircle = Math.trunc(Math.sqrt(circleS / pi));
     let sideTriangle = Math.trunc(Math.sqrt((4 * triangleS) / Math.sqrt(3)));
-    if (sideTriangle < radiusCircle * Math.sqrt(3)) {
+    let radiusTriangle = sideTriangle / Math.sqrt(3);
+    if (radiusCircle >= (radiusTriangle * Math.sqrt(3)) / 3) {
         console.log('triangle in circle: true');
-    } else if (sideTriangle > radiusCircle * Math.sqrt(3)) {
+    } else if (radiusCircle <= (radiusTriangle * Math.sqrt(3)) / 6) {
         console.log('circle in triangle: true');
     } else {
         console.log('false');
