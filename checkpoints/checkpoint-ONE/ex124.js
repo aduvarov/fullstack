@@ -17,7 +17,6 @@ for (let index = 200; index <= 500; index++) {
     }
     if (counter === 6) {
         num.push(index);
-        counter = 0;
     }
 }
 console.log(num);
