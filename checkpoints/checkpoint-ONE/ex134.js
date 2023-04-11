@@ -13,16 +13,111 @@
 // а «валет червей» старше «десятки червей»).
 
 function randomCard() {
-    let rnd = randomInteger(1, 4);
-    let rnd1 = randomInteger(6, 14);
-    let rnd2 = randomInteger(1, 4);
-    let rnd3 = randomInteger(6, 14);
-    if (rnd1 < rnd3) {
-        return 'Вторая карта больше';
-    } else if (rnd1 > rnd3) {
-        return 'Первая карта больше';
+    let cardSuit = randomInteger(1, 4);
+    let cardValue = randomInteger(6, 14);
+    let cardSuit1 = randomInteger(1, 4);
+    let cardValue1 = randomInteger(6, 14);
+    let firstCardSuit = cardSuit;
+    let secondCardSuit = cardSuit1;
+    let firstCardValue = cardValue;
+    let secondCardValue = cardValue1;
+
+    switch (cardSuit) {
+        case 1:
+            cardSuit = 'пики';
+            break;
+        case 2:
+            cardSuit = 'трефа';
+            break;
+        case 3:
+            cardSuit = 'бубна';
+            break;
+        case 4:
+            cardSuit = 'черви';
+            break;
+    }
+    switch (cardSuit1) {
+        case 1:
+            cardSuit1 = 'пики';
+            break;
+        case 2:
+            cardSuit1 = 'трефа';
+            break;
+        case 3:
+            cardSuit1 = 'бубна';
+            break;
+        case 4:
+            cardSuit1 = 'черви';
+            break;
+    }
+    switch (cardValue) {
+        case 6:
+            cardValue = 'шесть';
+            break;
+        case 7:
+            cardValue = 'семь';
+            break;
+        case 8:
+            cardValue = 'восемь';
+            break;
+        case 9:
+            cardValue = 'девять';
+            break;
+        case 10:
+            cardValue = 'десять';
+            break;
+        case 11:
+            cardValue = 'валет';
+            break;
+        case 12:
+            cardValue = 'дама';
+            break;
+        case 13:
+            cardValue = 'король';
+            break;
+        case 14:
+            cardValue = 'туз';
+            break;
+    }
+    switch (cardValue1) {
+        case 6:
+            cardValue1 = 'шесть';
+            break;
+        case 7:
+            cardValue1 = 'семь';
+            break;
+        case 8:
+            cardValue1 = 'восемь';
+            break;
+        case 9:
+            cardValue1 = 'девять';
+            break;
+        case 10:
+            cardValue1 = 'десять';
+            break;
+        case 11:
+            cardValue1 = 'валет';
+            break;
+        case 12:
+            cardValue1 = 'дама';
+            break;
+        case 13:
+            cardValue1 = 'король';
+            break;
+        case 14:
+            cardValue1 = 'туз';
+            break;
+    }
+    if (firstCardSuit > secondCardSuit) {
+        return `${cardSuit} ${cardValue} старше`;
+    } else if (firstCardSuit < secondCardSuit) {
+        return `${cardSuit1} ${cardValue1} старше`;
     } else {
-        return 'Карты равны';
+        if (firstCardValue > secondCardValue) {
+            return `${cardSuit} ${cardValue} старше`;
+        } else if (firstCardValue < secondCardValue) {
+            return `${cardSuit1} ${cardValue1} старше`;
+        }
     }
 }
 
