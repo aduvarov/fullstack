@@ -8,41 +8,41 @@
 // «Выбрана дама пик», «Выбрана шестерка бубен» и т. п.
 
 function randomCard() {
-    let rnd = randomInteger(1, 4);
-    let rnd1 = randomInteger(6, 14);
+    let cardSuit = randomInteger(1, 4);
+    let cardValue = randomInteger(6, 14);
 
-    switch (rnd) {
+    switch (cardSuit) {
         case 1:
-            rnd = 'пики';
+            cardSuit = 'пики';
         case 2:
-            rnd = 'трефа';
+            cardSuit = 'трефа';
         case 3:
-            rnd = 'бубна';
+            cardSuit = 'бубна';
         case 4:
-            rnd = 'черви';
+            cardSuit = 'черви';
     }
 
-    switch (rnd1) {
+    switch (cardValue) {
         case 6:
-            rnd1 = 'шесть';
+            cardValue = 'шесть';
         case 7:
-            rnd1 = 'семь';
+            cardValue = 'семь';
         case 8:
-            rnd1 = 'восемь';
+            cardValue = 'восемь';
         case 9:
-            rnd1 = 'девять';
+            cardValue = 'девять';
         case 10:
-            rnd1 = 'десять';
+            cardValue = 'десять';
         case 11:
-            rnd1 = 'валет';
+            cardValue = 'валет';
         case 12:
-            rnd1 = 'дама';
+            cardValue = 'дама';
         case 13:
-            rnd1 = 'король';
+            cardValue = 'король';
         case 14:
-            rnd1 = 'туз';
+            cardValue = 'туз';
     }
-    return `Выбрана  ${rnd1} ${rnd}`;
+    return `Выбрана  ${cardValue} ${cardSuit}`;
 }
 
 function randomInteger(min, max) {
