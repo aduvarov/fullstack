@@ -10,6 +10,7 @@ let side3 = 0;
 let side4 = 0;
 let side5 = 0;
 let side6 = 0;
+let dice = 10000;
 
 function randomCube() {
     let rnd = 0;
@@ -29,7 +30,7 @@ function randomCube() {
     }
 }
 
-function dropoutRate(side1, side2, side3, side4, side5, side6) {
+function dropoutRate(side1, side2, side3, side4, side5, side6, dice) {
     let rnd = 0;
     for (let index = 0; index < 10000; index++) {
         rnd = randomInteger(1, 6);
@@ -47,12 +48,12 @@ function dropoutRate(side1, side2, side3, side4, side5, side6) {
             side6++;
         }
     }
-    side1 = side1.toString()[0] + side1.toString()[1];
-    side2 = side2.toString()[0] + side2.toString()[1];
-    side3 = side3.toString()[0] + side3.toString()[1];
-    side4 = side4.toString()[0] + side4.toString()[1];
-    side5 = side5.toString()[0] + side5.toString()[1];
-    side6 = side6.toString()[0] + side6.toString()[1];
+    side1 = (side1 * 100) / dice;
+    side2 = (side2 * 100) / dice;
+    side3 = (side3 * 100) / dice;
+    side4 = (side4 * 100) / dice;
+    side5 = (side5 * 100) / dice;
+    side6 = (side6 * 100) / dice;
 
     return {
         side1: `${side1}%`,
