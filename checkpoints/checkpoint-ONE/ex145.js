@@ -6,7 +6,7 @@
 
 let a = 1;
 let b = 42;
-let n = 25;
+let n = 3;
 
 function interval(a, b, n) {
     let numbers = [];
@@ -22,19 +22,20 @@ function interval(a, b, n) {
     let mediumNum = Math.trunc(sum / numbers.length);
     let closeNum = [];
     let num = mediumNum;
-    for (let index = 0; index < numbers.length; index++) {
+    for (let index = 0; index < b; index++) {
         mediumNum--;
         if (numbers.includes(mediumNum)) {
-            closeNum.push(mediumNum);
+            closeNum.push(numbers.indexOf(mediumNum));
             break;
         }
     }
     mediumNum = num;
-    for (let index = 0; index < numbers.length; index++) {
+    for (let index = 0; index < b; index++) {
         mediumNum++;
         if (numbers.includes(mediumNum)) {
-            closeNum.push(mediumNum);
-            return `${closeNum} `;
+            closeNum.push(numbers.indexOf(mediumNum));
+            mediumNum = num;
+            return `${closeNum} среднее ${mediumNum} ${numbers}`;
         }
     }
 }
