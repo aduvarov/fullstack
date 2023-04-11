@@ -5,6 +5,7 @@
 
 let orel = 0;
 let reshka = 0;
+let flip = 10000;
 
 function randomCoin() {
     let rnd = 0;
@@ -16,9 +17,9 @@ function randomCoin() {
     }
 }
 
-function dropoutRate(orel, reshka) {
+function dropoutRate(orel, reshka, flip) {
     let rnd = 0;
-    for (let index = 0; index < 10000; index++) {
+    for (let index = 0; index < flip; index++) {
         rnd = randomInteger(1, 2);
         if (rnd === 1) {
             orel++;
@@ -26,8 +27,8 @@ function dropoutRate(orel, reshka) {
             reshka++;
         }
     }
-    orel = orel.toString()[0] + orel.toString()[1];
-    reshka = reshka.toString()[0] + reshka.toString()[1];
+    orel = (orel * 100) / flip;
+    reshka = (reshka * 100) / flip;
     return { orel: `${orel}%`, reshka: `${reshka}%` };
 }
 
