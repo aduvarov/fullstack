@@ -6,23 +6,19 @@
 // Функция дожна делать проверку на возможность запонения массива. И если это невозможно например a=1 b=3 n=5, то вернуть пустой массив.
 
 let a = 1;
-let b = 30;
-let n = 2;
+let b = 100;
+let n = 50;
 
 function interval(a, b, n) {
-    if (n > b - a + 1) {
+    if (n > b) {
         return [];
     }
-    let numbers = [];
     let rnd;
-    for (let index = 0; index < n; index++) {
-        rnd = randomInteger(a, b);
-        numbers.push(rnd);
-    }
     let result = [];
-    for (let str of numbers) {
-        if (!result.includes(str)) {
-            result.push(str);
+    for (let index = 0; result.length < n; index++) {
+        rnd = randomInteger(a, b);
+        if (!result.includes(rnd)) {
+            result.push(rnd);
         }
     }
     return result;
