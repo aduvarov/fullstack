@@ -14,8 +14,9 @@ function interval(a, b, n) {
         rnd = randomInteger(a, b);
         numbers.push(rnd);
     }
-    return numbers.sort(compareNumbers);
+    return numbers;
 }
+console.log(interval(a, b, n).sort(compareNumbers));
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
