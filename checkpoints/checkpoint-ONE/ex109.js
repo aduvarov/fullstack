@@ -7,9 +7,10 @@
 // ся до ввода правильного значения. После этого на экран должно
 // выводиться некоторое приветствие.
 
-let password = +prompt('Введите пароль в виде целого числа');
+let password = 3;
+let userAnswer = +prompt('Введите пароль в виде целого числа');
 
-while (num % 2) {
-    password = +prompt('Error: введите чётное число');
+while (userAnswer !== password) {
+    userAnswer = +prompt('Error: введите чётное число');
 }
 alert('Введен верный пароль');
