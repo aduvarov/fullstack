@@ -12,7 +12,7 @@ for (let row = 0; row < 13; row++) {
     // //
     for (let col = 0; col < 1; col++) {
         inch = inch + 1;
-        document.write(`<td> ${inch} фунт </td>`);
+        document.write(`<td> ${inch} дюйм </td>`);
     }
     for (let col1 = 0; col1 < 1; col1++) {
         mm = mm + 25.4;
