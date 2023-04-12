@@ -109,14 +109,14 @@ function randomCard() {
             break;
     }
     if (firstCardSuit > secondCardSuit) {
-        return `${cardSuit} ${cardValue} старше`;
+        return `Игрок 1:${cardSuit} ${cardValue} Игрок 2: ${cardSuit1} ${cardValue1} (Игрок 1 выйграл)`;
     } else if (firstCardSuit < secondCardSuit) {
-        return `${cardSuit1} ${cardValue1} старше`;
+        return `Игрок 1:${cardSuit} ${cardValue} Игрок 2: ${cardSuit1} ${cardValue1} (Игрок 2 выйграл)`;
     } else {
         if (firstCardValue > secondCardValue) {
-            return `${cardSuit} ${cardValue} старше`;
+            return `Игрок 1:${cardSuit} ${cardValue} Игрок 2: ${cardSuit1} ${cardValue1} (Игрок 1 выйграл)`;
         } else if (firstCardValue < secondCardValue) {
-            return `${cardSuit1} ${cardValue1} старше`;
+            return `Игрок 1:${cardSuit} ${cardValue} Игрок 2: ${cardSuit1} ${cardValue1} (Игрок 2 выйграл)`;
         }
     }
 }
