@@ -14,33 +14,46 @@ function randomCard() {
     switch (cardSuit) {
         case 1:
             cardSuit = 'пики';
+            break;
         case 2:
             cardSuit = 'трефа';
+            break;
         case 3:
             cardSuit = 'бубна';
+            break;
         case 4:
             cardSuit = 'черви';
+            break;
     }
 
     switch (cardValue) {
         case 6:
             cardValue = 'шесть';
+            break;
         case 7:
             cardValue = 'семь';
+            break;
         case 8:
             cardValue = 'восемь';
+            break;
         case 9:
             cardValue = 'девять';
+            break;
         case 10:
             cardValue = 'десять';
+            break;
         case 11:
             cardValue = 'валет';
+            break;
         case 12:
             cardValue = 'дама';
+            break;
         case 13:
             cardValue = 'король';
+            break;
         case 14:
             cardValue = 'туз';
+            break;
     }
     return `Выбрана  ${cardValue} ${cardSuit}`;
 }
