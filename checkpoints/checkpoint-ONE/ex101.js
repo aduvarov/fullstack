@@ -4,13 +4,13 @@
 // содержат цифру n.
 // result array
 
-let n = 5;
+let n = 9;
 let num = [];
 
-for (let index = 10; index < 99; index++) {
-    if (index.toString().includes(5)) {
+for (let index = 10; index <= 99; index++) {
+    if (index.toString().includes(n)) {
         num.push(index);
-    } else if (index % 5 === 0) {
+    } else if (index % n === 0) {
         num.push(index);
     }
 }
