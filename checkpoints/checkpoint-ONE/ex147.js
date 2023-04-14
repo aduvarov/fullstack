@@ -5,8 +5,8 @@
 // Написать функцию чтобы найти в этом массиве позицию самой продоложительной последовательности одинаковых чисел.
 
 let a = 1;
-let b = 50;
-let n = 100;
+let b = 5;
+let n = 20;
 
 function interval(a, b, n) {
     let numbers = [];
@@ -17,7 +17,6 @@ function interval(a, b, n) {
     }
     let c = 1;
     let arr = [];
-    numbers.sort(compareNumbers);
     for (let index = 0; index < 100; index++) {
         if (numbers[index] === numbers[index + 1]) {
             c = c + 1;
@@ -28,8 +27,8 @@ function interval(a, b, n) {
     }
     let longerInterval = 0;
     for (let index = 0; index < arr.length; index++) {
-        if (arr[index] < arr[index + 1]) {
-            longerInterval = arr[index + 1];
+        if (longerInterval < arr[index]) {
+            longerInterval = arr[index];
         }
     }
     return longerInterval;
