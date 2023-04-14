@@ -3,8 +3,6 @@
 //Разработать функцию проверки монетки из задания ex127. Выводящую процентное соотношение выпадания орлов и решек
 // result object
 
-let orel = 0;
-let reshka = 0;
 let flip = 10000;
 
 function randomCoin() {
@@ -17,7 +15,9 @@ function randomCoin() {
     }
 }
 
-function dropoutRate(orel, reshka, flip) {
+function dropoutRate(flip) {
+    let orel = 0;
+    let reshka = 0;
     let rnd = 0;
     for (let index = 0; index < flip; index++) {
         rnd = randomInteger(1, 2);

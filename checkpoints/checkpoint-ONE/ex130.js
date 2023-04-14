@@ -4,12 +4,6 @@
 // Разработать функцию проверки кубика из задания ex129. Выводящую процентное соотношение выпадания чисел от 1 до 6
 // result object
 
-let side1 = 0;
-let side2 = 0;
-let side3 = 0;
-let side4 = 0;
-let side5 = 0;
-let side6 = 0;
 let dice = 10000;
 
 function randomCube() {
@@ -30,7 +24,13 @@ function randomCube() {
     }
 }
 
-function dropoutRate(side1, side2, side3, side4, side5, side6, dice) {
+function dropoutRate(dice) {
+    let side1 = 0;
+    let side2 = 0;
+    let side3 = 0;
+    let side4 = 0;
+    let side5 = 0;
+    let side6 = 0;
     let rnd = 0;
     for (let index = 0; index < 10000; index++) {
         rnd = randomInteger(1, 6);
