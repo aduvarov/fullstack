@@ -13,13 +13,22 @@ let bandit = {
         let result = [];
         let rnd;
         let fruit;
+        let scrolling = 0;
         for (let index = 1; index <= 1000000; index++) {
+            scrolling++;
             rnd = randomInteger(1, 8);
             fruit = this.cylinder1[rnd];
             result.push(fruit);
+            rnd = randomInteger(1, 8);
+            fruit = this.cylinder1[rnd];
+            result.push(fruit);
+            rnd = randomInteger(1, 8);
+            fruit = this.cylinder1[rnd];
+            result.push(fruit);
+
             if (result.length === 3) {
                 if (result[0] === result[1] && result[1] === result[2]) {
-                    return result;
+                    return `${result} ${scrolling}`;
                 } else {
                     result = [];
                 }
