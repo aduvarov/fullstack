@@ -24,19 +24,15 @@ for (let index = 0; index < 10; index++) {
 document.write('<table border="1">');
 for (let row = 0; row < 10; row++) {
     document.write('<tr>');
-    for (let col = 0; col < 1; col++) {
-        if (trueAns[row] !== undefined) {
-            document.write(`<td class="green"> ${trueAns[row]} </td>`);
-        } else {
-            document.write(`<td></td>`);
-        }
-        if (falseAns[row] !== undefined) {
-            document.write(`<td class="red"> ${falseAns[row]} </td>`);
-        } else {
-            document.write(`<td></td>`);
-        }
-        document.write('</tr>');
+    if (trueAns[row] !== undefined) {
+        document.write(`<td class="green"> ${trueAns[row]} </td>`);
     }
+    document.write('</tr>');
+    document.write('<tr>');
+    if (falseAns[row] !== undefined) {
+        document.write(`<td class="red"> ${falseAns[row]} </td>`);
+    }
+    document.write('</tr>');
 }
 
 document.write('</table>');
