@@ -11,6 +11,6 @@ let password = 3;
 let userAnswer = +prompt('Введите пароль в виде целого числа');
 
 while (userAnswer !== password) {
-    userAnswer = +prompt('Error: введите чётное число');
+    userAnswer = +prompt('Error: введён неверный пароль');
 }
 alert('Введен верный пароль');
