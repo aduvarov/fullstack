@@ -20,8 +20,8 @@ function dropoutRate(flip) {
     let reshka = 0;
     let rnd = 0;
     for (let index = 0; index < flip; index++) {
-        rnd = randomInteger(1, 2);
-        if (rnd === 1) {
+        rnd = randomCoin();
+        if (rnd === 'orel') {
             orel++;
         } else {
             reshka++;
@@ -36,3 +36,4 @@ function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
+console.log(dropoutRate(flip));
