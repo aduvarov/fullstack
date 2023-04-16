@@ -10,12 +10,13 @@ let flat = 104;
 
 function searchFlat(flat) {
     let number = 0;
+
     for (let entrance = 1; entrance <= 4; entrance++) {
         for (let floor = 1; floor <= 9; floor++) {
-            for (let allFlat = 1; allFlat <= 6; allFlat++) {
+            for (let numberFlat = 1; numberFlat <= 6; numberFlat++) {
                 number = number + 1;
                 if (number === flat) {
-                    return { floor: floor, entrance: entrance };
+                    return { floor: floor, entrance: entrance, numberFlat: numberFlat };
                 }
             }
         }
