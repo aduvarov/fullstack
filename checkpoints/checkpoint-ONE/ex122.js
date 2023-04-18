@@ -6,38 +6,36 @@
 // inut: трёхмерный массив.
 // result: 0 или 1 или 2
 
-let group = [
-    [
-        3, 4, 5, 3, 2, 2, 5, 5, 3, 4, 5, 3, 2, 2, 3, 5, 2, 2, 5, 3, 3, 4, 5, 3, 2, 2, 5, 5, 3, 4, 5, 3, 2, 2, 3, 5, 2,
-        2, 5, 3, 3, 4, 5, 3, 2, 2, 5, 5, 3, 4, 5, 3, 2, 2, 3, 5, 2, 2, 5, 3,
-    ],
-    [
-        3, 2, 5, 3, 2, 2, 5, 4, 3, 4, 5, 3, 2, 4, 5, 5, 2, 4, 5, 4, 3, 2, 5, 3, 2, 2, 5, 4, 3, 4, 5, 3, 2, 4, 5, 5, 2,
-        4, 5, 4, 3, 2, 5, 3, 2, 2, 5, 4, 3, 4, 5, 3, 2, 4, 5, 5, 2, 4, 5, 4,
-    ],
-    [
-        5, 4, 5, 3, 2, 2, 3, 5, 3, 4, 5, 3, 3, 2, 5, 4, 2, 3, 3, 5, 5, 4, 5, 3, 2, 2, 3, 5, 3, 4, 5, 3, 3, 2, 5, 4, 2,
-        3, 3, 5, 5, 4, 5, 3, 2, 2, 3, 5, 3, 4, 5, 3, 3, 2, 5, 4, 2, 3, 3, 5,
-    ],
-];
-let summa1 = 0;
-let summa2 = 0;
-let summa3 = 0;
-let nod1 = 0;
-let nod2 = 0;
-let nod3 = 0;
-for (let index = 0; index < group[0].length; index++) {
-    summa1 = summa1 + group[0][index];
-    summa2 = summa2 + group[1][index];
-    summa3 = summa3 + group[2][index];
+let groups = [];
+let summa = [];
+let points = 0;
+let rnd = 0;
+let nodPoint = [];
+for (let groupSt = 0; groupSt < 3; groupSt++) {
+    groups[groupSt] = [];
+    for (let student = 0; student < 20; student++) {
+        groups[groupSt][student] = [];
+        for (let exam = 0; exam < 3; exam++) {
+            rnd = groups[groupSt][student][exam] = randomInteger(1, 5);
+            points += rnd;
+        }
+    }
+    summa.push(points);
+    points = 0;
 }
-nod1 = summa1 / 20;
-nod2 = summa2 / 20;
-nod3 = summa3 / 20;
-if (nod1 > nod2 && nod1 > nod3) {
+let nod = 0;
+for (let count = 0; count < 3; count++) {
+    nod = summa[count] / 20;
+    nodPoint.push(nod);
+}
+if (nodPoint[0] > nodPoint[1] && nodPoint[0] > nodPoint[2]) {
     console.log(1);
-} else if (nod2 > nod1 && nod2 > nod3) {
+} else if (nodPoint[1] > nodPoint[0] && nodPoint[1] > nodPoint[2]) {
     console.log(2);
-} else if (nod3 > nod1 && nod3 > nod2) {
+} else if (nodPoint[2] > nodPoint[0] && nodPoint[2] > nodPoint[1]) {
     console.log(3);
+}
+function randomInteger(min, max) {
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
 }
