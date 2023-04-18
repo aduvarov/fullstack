@@ -35,7 +35,7 @@ function interval(a, b, n) {
         }
     }
 
-    return `${arr} ${numbers} `;
+    return arr;
 }
 
 function randomInteger(min, max) {
