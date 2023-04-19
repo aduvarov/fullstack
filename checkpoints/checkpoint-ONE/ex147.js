@@ -17,9 +17,10 @@ function interval(a, b, n) {
     }
     let c = 1;
     let arr = [];
-    for (let index = 0; index < 100; index++) {
+    for (let index = 0; index < numbers.length; index++) {
         if (numbers[index] === numbers[index + 1]) {
             c = c + 1;
+            arr.push(c);
         } else {
             arr.push(c);
             c = 1;
@@ -27,10 +28,11 @@ function interval(a, b, n) {
     }
     let interval = arr[0];
     let longerInterval = 0;
-    for (let index = 0; index < arr.length; index++) {
+    for (let index = 0; index < numbers.length; index++) {
         if (interval < arr[index]) {
             interval = arr[index];
-            longerInterval = index;
+            let i = interval - 1;
+            longerInterval = index - i + 1;
         }
     }
     return longerInterval;
