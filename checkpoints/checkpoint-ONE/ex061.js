@@ -2,27 +2,19 @@
 
 //Даны вещественные положительные числа a, b, c, x, y. Выяснить, пройдет ли кирпич с ребрами a, b, c в прямоугольное отверстие со сторонами x и y. Просовывать кирпич в отверстие разрешается только так, чтобы каждое из его ребер было параллельно или перпендикулярно каждой из сторон отверстия.
 
-let brickW = 15;
-let brickL = 13;
-let brickH = 14;
-let holeW = 30;
-let holeL = 20;
+let brickL = 30;
+let brickW = 30;
+let brickH = 30;
 
-if (
-    brickW <= holeW &&
-    brickL <= holeL &&
-    brickL <= holeW &&
-    brickW <= holeL &&
-    brickW <= holeW &&
-    brickH <= holeL &&
-    brickH <= holeW &&
-    brickW <= holeL &&
-    brickH <= holeW &&
-    brickL <= holeL &&
-    brickL <= holeW &&
-    brickH <= holeL
-) {
-    console.log('Кирпич пройдет в отверстие.');
+let holeW = 30;
+let holeL = 55;
+
+if (brickW <= holeW && brickH <= holeL) {
+    console.log('залез');
+} else if (brickW <= holeL && brickL <= holeL) {
+    console.log('залез');
+} else if (brickH <= holeL && brickL <= holeW) {
+    console.log('залез');
 } else {
-    console.log('Кирпич не пройдет в отверстие.');
+    console.log('Не залез');
 }
