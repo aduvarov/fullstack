@@ -33,7 +33,7 @@ function dropoutRate(dice) {
     let side6 = 0;
     let rnd = 0;
     for (let index = 0; index < 10000; index++) {
-        rnd = randomInteger(1, 6);
+        rnd = randomCube();
         if (rnd === 1) {
             side1++;
         } else if (rnd === 2) {
