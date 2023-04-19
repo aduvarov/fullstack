@@ -25,10 +25,12 @@ function interval(a, b, n) {
             c = 1;
         }
     }
+    let interval = arr[0];
     let longerInterval = 0;
     for (let index = 0; index < arr.length; index++) {
-        if (longerInterval < arr[index]) {
-            longerInterval = arr[index];
+        if (interval < arr[index]) {
+            interval = arr[index];
+            longerInterval = index;
         }
     }
     return longerInterval;
@@ -37,7 +39,4 @@ function interval(a, b, n) {
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
-}
-function compareNumbers(a, b) {
-    return a - b;
 }
