@@ -23,20 +23,20 @@ for (let index = 0; index < 10; index++) {
 
 document.write('<table border="1">');
 for (let row = 0; row < 10; row++) {
-    document.write('<tr>');
     if (trueAns[row] !== undefined) {
+        document.write('<tr>');
         document.write(`<td class="green"> ${trueAns[row]} </td>`);
+        document.write('</tr>');
     }
-    document.write('</tr>');
-    document.write('<tr>');
-    if (falseAns[row] !== undefined) {
-        document.write(`<td class="red"> ${falseAns[row]} </td>`);
-    }
-    document.write('</tr>');
 }
-
+for (let row = 0; row < 10; row++) {
+    if (falseAns[row] !== undefined) {
+        document.write('<tr>');
+        document.write(`<td class="red"> ${falseAns[row]} </td>`);
+        document.write('</tr>');
+    }
+}
 document.write('</table>');
-
 function randomInteger(min, max) {
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
