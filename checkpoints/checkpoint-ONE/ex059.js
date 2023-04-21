@@ -6,16 +6,19 @@
 
 let envelopeLength = 50;
 let envelopeWidth = 40;
-let postcardLength = 48;
-let postcardWidth = 38;
+let postcardLength = 48; //10
+let postcardWidth = 38; // 45
 
 function postcardInEnvelope(envelopeLength, envelopeWidth, postcardLength, postcardWidth) {
-    if (envelopeLength < postcardLength) {
-        return false;
-    }
-    if (postcardWidth > envelopeWidth) {
-        return false;
-    } else {
+    envelopeLength -= 2;
+    envelopeWidth -= 2;
+
+    if (
+        (envelopeLength >= postcardLength && envelopeWidth >= postcardWidth) ||
+        (envelopeLength >= postcardWidth && envelopeWidth >= postcardLength)
+    ) {
         return true;
+    } else {
+        return false;
     }
 }
