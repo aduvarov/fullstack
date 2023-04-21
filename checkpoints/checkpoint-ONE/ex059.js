@@ -10,16 +10,12 @@ let postcardLength = 48;
 let postcardWidth = 38;
 
 function postcardInEnvelope(envelopeLength, envelopeWidth, postcardLength, postcardWidth) {
-    if (envelopeLength - postcardLength >= 2) {
-        if (envelopeWidth - postcardWidth >= 2) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    if (envelopeLength - postcardWidth >= 2) {
-        return true;
-    } else {
+    if (envelopeLength < postcardLength) {
         return false;
+    }
+    if (postcardWidth > envelopeWidth) {
+        return false;
+    } else {
+        return true;
     }
 }
