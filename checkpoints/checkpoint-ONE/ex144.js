@@ -30,28 +30,29 @@ function prevalentWindDirection(obj) {
         NW: [],
     };
     let nodWind = [];
+    let windsL = [];
     let summa;
-    let nod = 0;
     for (let key in winds) {
         summa = 0;
         winds[key].forEach(element => {
             summa = summa + element;
-            return key;
         });
-        nod = Math.trunc(summa / winds[key].length);
-        winds[key] = nod;
-        nodWind.push(nod);
+        nodWind.push(summa);
+        nodWind.push(winds[key].length);
+        winds[key] = summa;
     }
     let medSpeed = 0;
+    let medSpeedWind = 0;
     for (let index = 0; index < nodWind.length; index++) {
-        if (nodWind[index] < nodWind[index + 1]) {
-            medSpeed = nodWind[index + 1];
+        if (medSpeed < nodWind[index]) {
+            medSpeed = nodWind[index];
+            medSpeedWind = nodWind[index + 1];
         }
     }
     for (let key in winds) {
         if (winds[key] === medSpeed) {
             obj.prevalentwWindDirection = key;
-            obj.averageWindSpeed = medSpeed;
+            obj.averageWindSpeed = (medSpeed / medSpeedWind).toFixed(1);
         }
     }
     let month = {
