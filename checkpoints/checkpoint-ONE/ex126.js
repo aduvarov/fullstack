@@ -4,9 +4,18 @@
 // коров и телят можно купить на все эти деньги, если плата за
 // быка – 10 рублей, за корову – 5 рублей, за теленка – полтинник
 // (0,5 рубля) и надо купить 100 голов скота?
+//1 бык 9 коров 90 телят
 
 let summa = 100;
-let bull = summa / 1;
-let cow = summa / 5;
-let telenote = summa * 2;
-// 9-коров 1-бык 90-телят
+let bull = 0;
+let cow = 0;
+let telenote = 0;
+
+for (bull = 0; bull < 100; bull++) {
+    for (cow = 0; cow < 100; cow++) {
+        telenote = 100 - bull - cow;
+        if (bull * 10 + cow * 5 + telenote * 0.5 === 100) {
+            console.log(`быки: ${bull} коровы: ${cow} телята: ${telenote}`);
+        }
+    }
+}
