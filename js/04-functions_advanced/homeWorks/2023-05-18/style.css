@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    margin-left: 20px;
+}
+
+body {
+    background-color: rgb(165, 147, 182);
+}
+
+h1 {
+    color: rgb(1, 1, 141);
+}
+h2 {
+    color: rgb(68, 68, 245);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.contact {
+    display: flex;
+    width: 350px;
+    font-size: 20px;
+    font-size: 25px;
+}
+.contact__value {
+    margin-left: 10px;
+}
+.exp__work {
+    margin-left: 40px;
+}
+
+.skills {
+    color: rgb(60, 5, 65);
+}
