@@ -270,5 +270,5 @@ let shopDB = [
 console.log(filterProduct(shopDB, 'Clothing'));
 
 function filterProduct(db, category) {
-    return shopDB.filter(product => (product.category === category ? true : false));
+    return db.filter(product => (product.category === category ? true : false));
 }

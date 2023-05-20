@@ -6,7 +6,7 @@ let shopDB = [
     {
         id: '001',
         img: 'img/image-122.jpg',
-        name: 'Striped long Sleeve Shirt',
+        name: 'Striped Long Sleeve Shirt',
         label: 'new',
         description: 'Red/Sky Blue',
         price: '119',
@@ -269,8 +269,8 @@ let shopDB = [
     },
 ];
 
-console.log(filterProduct(shopDB, 'Shirt'));
+console.log(filterProduct(shopDB, 'Long'));
 
 function filterProduct(db, name) {
-    return shopDB.filter(product => (product.name.indexOf(name) !== -1 ? true : false));
+    return db.filter(product => (product.name.toLowerCase().includes(name.toLowerCase()) ? true : false));
 }

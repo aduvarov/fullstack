@@ -271,5 +271,5 @@ let shopDB = [
 console.log(filterPrice(shopDB, 300, 400));
 
 function filterPrice(db, price, price2) {
-    return shopDB.filter(product => (product.price > price && product.price < price2 ? true : false));
+    return db.filter(product => (product.price > price && product.price < price2 ? true : false));
 }
