@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'Raleway', sans-serif;
+}
+h2 {
+    font-family: 'EB Garamond', serif;
+}
+.timer {
+    font-family: 'EB Garamond', serif;
+    font-size: 25px;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(168, 170, 179);
+}
+.wrapper {
+    height: inherit;
+}
+
+.middle {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+table {
+    background-color: rgb(87, 173, 233);
+    font-family: 'Lora', serif;
+}
+.top {
+    padding-top: 50px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.bottom {
+    height: 15%;
+    padding-bottom: 50px;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+td {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+
+.red {
+    color: red;
+}
+.yellow {
+    color: yellow;
+}
+.blue {
+    color: blue;
+}
+.green {
+    color: green;
+}
+.black {
+    color: black;
+}
+.medium {
+    font-size: 30px;
+}
+.medium2 {
+    font-size: 25px;
+}
+.small {
+    font-size: 20px;
+}
+.small2 {
+    font-size: 24px;
+}
+.big {
+    font-size: 35px;
+}
+.big2 {
+    font-size: 37px;
+}
+
+.td_red {
+    background-color: red;
+    color: black;
+}
