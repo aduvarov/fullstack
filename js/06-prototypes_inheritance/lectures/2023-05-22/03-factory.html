@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototype ITVDN (factory)</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .car-info {
+                display: inline-block;
+                margin: 10px;
+            }
+            img {
+                width: 300px;
+            }
+        </style>
+        <div class="car-info" id="card1"></div>
+        <div class="car-info" id="card2"></div>
+        <div class="car-info" id="card3"></div>
+        <script>
+            let card1 = document.querySelector('#card1');
+            let card2 = document.querySelector('#card2');
+            let card3 = document.querySelector('#card3');
+            let car1 = createCar('Infiniti', 'JX35', 2013, 'Двигатель бензин, 3.5 л', 'images/infiniti.jpg');
+            let car2 = createCar('BMW', '3-Series', 2013, 'Двигатель 1.6 л', 'images/BMW3.jpg');
+            let car3 = createCar('Audi', 'A7', 2010, 'Двигатель бензин, 3.0 л', 'images/audiA7.jpg');
+
+            car1.render(card1);
+            car2.render(card2);
+            car3.render(card3);
+
+            function createCar(manufacture, model, year, engine, img) {
+                let car = {
+                    manufacture: manufacture,
+                    model: model,
+                    year: year,
+                    engine: engine,
+                    img: img,
+
+                    render: function (element) {
+                        element.insertAdjacentHTML('beforeend', `<img src="${this.img}" alt=""><br>`);
+                        element.insertAdjacentHTML('beforeend', `Марка: ${this.manufacture}  <br>`);
+                        element.insertAdjacentHTML('beforeend', `Модель: ${this.model}<br>`);
+                        element.insertAdjacentHTML('beforeend', `Год выпуска: ${this.year}<br>`);
+                        element.insertAdjacentHTML('beforeend', `${this.engine} <br>`);
+                    },
+                };
+                return car;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototype ITVDN (prototype write)</title>
+    </head>
+    <body>
+        <script>
+            function Car(model) {
+                this.model = model;
+            }
+
+            Car.prototype.wheelsNumber = 4;
+
+            Car.prototype.showStats = function () {
+                console.log(this.model);
+                console.log(this.wheelsNumber);
+            };
+
+            let car1 = new Car('Jaguar X-Type');
+            let car2 = new Car('Audi A6');
+            let car3 = new Car('КамАЗ-55111');
+            car3.wheelsNumber = 6;
+
+            car3.showStats(); // КамАЗ-55111 6
+            car1.showStats(); //Jaguar X-Type 4
+            car2.showStats(); // Audi A6 4
+        </script>
+    </body>
+</html>

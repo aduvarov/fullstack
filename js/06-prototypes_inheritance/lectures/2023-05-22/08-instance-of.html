@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototype ITVDN (instance of)</title>
+    </head>
+    <body>
+        <script>
+            function Car(model) {
+                this.model = model;
+            }
+
+            function User(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            let date = new Date();
+            let car = new Car('Jaguar X-Type');
+            let user = new User('John', 25);
+
+            console.log(typeof date); // object
+            console.log(typeof car); // object
+            console.log(typeof user); // object
+
+            console.log(date instanceof Date); // true
+            console.log(car instanceof Car); // true
+            console.log(user instanceof User); //true
+
+            console.log(user instanceof Date); // false
+            console.log(user instanceof Car); //false
+        </script>
+    </body>
+</html>

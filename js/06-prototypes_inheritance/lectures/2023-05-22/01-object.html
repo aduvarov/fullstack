@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototypes (object)</title>
+    </head>
+    <body>
+        <style>
+            #placeholder img {
+                width: 300px;
+            }
+            #placeholder {
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+        </style>
+
+        <div id="placeholder"></div>
+        <script>
+            let placeholder = document.querySelector('#placeholder');
+            let car1 = {
+                img: 'images/infiniti.jpg',
+                manufacture: 'Infiniti',
+                model: 'JX35',
+                year: 2013,
+                engine: 'Двигатель бензин, 3.5 л',
+
+                render: function (element) {
+                    element.insertAdjacentHTML('beforeend', `<img src="${car1.img}" alt="">`);
+                    element.insertAdjacentHTML('beforeend', `Марка: ${car1.manufacture}  <br>`);
+                    element.insertAdjacentHTML('beforeend', `Модель: ${car1.model}<br>`);
+                    element.insertAdjacentHTML('beforeend', `Год выпуска: ${car1.year}<br>`);
+                    element.insertAdjacentHTML('beforeend', `${car1.engine}<br>`);
+                },
+            };
+
+            car1.render(placeholder);
+
+            // BMW 3-Series, 2013 Двигатель 1.6 л Коробка передач автомат Тип кузова седан Цвет коричневый Пробег, км 110 655
+            // Руль левый Поколение 6 поколение
+
+            // Audi A7, 2010Двигатель бензин, 3.0 л Мощность 300 л.с., налог Коробка передач робот Привод 4WD Цвет коричневый
+            // Пробег, км 116 157 Руль левый Поколение 1 поколение Комплектация 3.0 TFSI quattro S tronic
+        </script>
+    </body>
+</html>

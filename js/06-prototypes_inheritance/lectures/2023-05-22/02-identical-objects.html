@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prototypes (identical objects)</title>
+    </head>
+    <body>
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            .car-info {
+                display: inline-block;
+                margin: 10px;
+            }
+            img {
+                width: 300px;
+            }
+        </style>
+
+        <div id="card1" class="car-info"></div>
+        <div id="card2" class="car-info"></div>
+        <div id="card3" class="car-info"></div>
+        <script>
+            let card1 = document.querySelector('#card1');
+            let card2 = document.querySelector('#card2');
+            let card3 = document.querySelector('#card3');
+
+            let car1 = {
+                img: 'images/infiniti.jpg',
+                manufacture: 'Infiniti',
+                model: 'JX35',
+                year: 2013,
+                engine: 'Двигатель бензин, 3.5 л',
+
+                render: function (element) {
+                    element.insertAdjacentHTML('beforeend', `<img src="${car1.img}" alt=""><br>`);
+                    element.insertAdjacentHTML('beforeend', `Марка: ${car1.manufacture}  <br>`);
+                    element.insertAdjacentHTML('beforeend', `Модель: ${car1.model}<br>`);
+                    element.insertAdjacentHTML('beforeend', `Год выпуска: ${car1.year}<br>`);
+                    element.insertAdjacentHTML('beforeend', `${car1.engine} <br>`);
+                },
+            };
+            let car2 = {
+                img: 'images/BMW3.jpg',
+                manufacture: 'BMW',
+                model: '3-Series',
+                year: 2013,
+                engine: 'Двигатель 1.6 л',
+                render: function (element) {
+                    element.insertAdjacentHTML('beforeend', `<img src="${car2.img}" alt=""><br>`);
+                    element.insertAdjacentHTML('beforeend', `Марка: ${car2.manufacture}  <br>`);
+                    element.insertAdjacentHTML('beforeend', `Модель: ${car2.model}<br>`);
+                    element.insertAdjacentHTML('beforeend', `Год выпуска: ${car2.year}<br>`);
+                    element.insertAdjacentHTML('beforeend', `${car2.engine}<br>`);
+                },
+            };
+            let car3 = {
+                img: 'images/audiA7.jpg',
+                manufacture: 'Audi',
+                model: 'A7',
+                year: 2010,
+                engine: 'Двигатель бензин, 3.0 л',
+                render: function (element) {
+                    element.insertAdjacentHTML('beforeend', `<img src="${car3.img}" alt=""><br>`);
+                    element.insertAdjacentHTML('beforeend', `Марка: ${car3.manufacture}  <br>`);
+                    element.insertAdjacentHTML('beforeend', `Модель: ${car3.model}<br>`);
+                    element.insertAdjacentHTML('beforeend', `Год выпуска: ${car3.year}<br>`);
+                    element.insertAdjacentHTML('beforeend', `${car3.engine}<br>`);
+                },
+            };
+            car1.render(card1);
+            car2.render(card2);
+            car3.render(card3);
+        </script>
+    </body>
+</html>
