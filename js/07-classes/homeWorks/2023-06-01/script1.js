@@ -33,7 +33,7 @@ class Book {
         return this._numPages;
     }
     set numPages(value) {
-        console.log(`Вырывали из этой книги 68 страниц.`);
+        console.log(`Вырывали из этой книги ${value} страниц.`);
         this._numPages = value;
     }
     get year() {
@@ -53,7 +53,7 @@ class Book {
             console.error('Error:Введите число');
         } else {
             this._readPages += value;
-            this._remPages = this._remPages - this._readPages;
+            this._remPages = this._remPages - value;
         }
     }
 }
@@ -73,22 +73,22 @@ let book2 = new Book(
     2022
 );
 
-book1.readPages; // В этой книге прочтано уже 0 страниц
-book2.readPages; // В этой книге прочтано уже 0 страниц
-book1.readPages = 50;
-book1.readPages; // В этой книге прочтано уже 50 страниц
-book2.readPages; // В этой книге прочтано уже 0 страниц
-book2.readPages = 150;
-book1.readPages; // В этой книге прочтано уже 50 страниц
-book2.readPages; // В этой книге прочтано уже 150 страниц
-book1.readPages = 300;
-book1.numPages; // 1100;
-book1.readPages; // В этой книге прочтано уже 350 страниц
-book2.readPages = 250; //Невозможно прочитать 250 страниц в этой книге
-book2.readPages; // В этой книге прочтано уже 150 страниц
-book1.author = 'Михаил Прокопчик'; // Error: не возможно заменить автора у книги
-book1.author; // Мэтт Фрисби
-book2.iSBN = '45823452347598'; // Error: не возможно изменить уникальный номер книжного издания
-book2.iSBN; // 978-5-4461-1495-5
-book1.numPages = 1100; // Вырывали из этой книги 68 страниц.
-book1.numPages; // 1100;
+// book1.readPages; // В этой книге прочтано уже 0 страниц
+// book2.readPages; // В этой книге прочтано уже 0 страниц
+// book1.readPages = 50;
+// book1.readPages; // В этой книге прочтано уже 50 страниц
+// book2.readPages; // В этой книге прочтано уже 0 страниц
+// book2.readPages = 150;
+// book1.readPages; // В этой книге прочтано уже 50 страниц
+// book2.readPages; // В этой книге прочтано уже 150 страниц
+// book1.readPages = 300;
+// book1.numPages; // 1100;
+// book1.readPages; // В этой книге прочтано уже 350 страниц
+// book2.readPages = 250; //Невозможно прочитать 250 страниц в этой книге
+// book2.readPages; // В этой книге прочтано уже 150 страниц
+// book1.author = 'Михаил Прокопчик'; // Error: не возможно заменить автора у книги
+// book1.author; // Мэтт Фрисби
+// book2.iSBN = '45823452347598'; // Error: не возможно изменить уникальный номер книжного издания
+// book2.iSBN; // 978-5-4461-1495-5
+// book1.numPages = 1100; // Вырывали из этой книги 68 страниц.
+// book1.numPages; // 1100;
