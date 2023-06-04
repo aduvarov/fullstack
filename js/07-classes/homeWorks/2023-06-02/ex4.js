@@ -16,19 +16,25 @@ class Circle {
 }
 
 class Cone extends Circle {
+    l;
+    area;
+    volume;
+    fullArea;
     constructor(radius, height) {
         super(radius);
-        this.radius = radius;
         this.height = height;
     }
     getVolume() {
-        area = super.getArea();
-        volume = (1 / 3) * area * this.height;
-        return volume;
+        this.area = super.getArea();
+        this.volume = (1 / 3) * this.area * this.height;
+        console.log(this.volume);
     }
     getArea() {
-        l = Math.sqrt(this.radius ** 2 + this.height ** 2);
-        fullArea = super.getArea() + Math.PI * this.radius * l;
-        return fullArea;
+        this.l = Math.sqrt(this.radius ** 2 + this.height ** 2);
+        this.fullArea = super.getArea() + Math.PI * this.radius * this.l;
+        console.log(this.fullArea);
     }
 }
+let v2 = new Cone(3, 5);
+v2.getVolume();
+v2.getArea();
