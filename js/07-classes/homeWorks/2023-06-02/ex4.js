@@ -14,3 +14,21 @@ class Circle {
         return Math.PI * Math.pow(this.radius, 2);
     }
 }
+
+class Cone extends Circle {
+    constructor(radius, height) {
+        super(radius);
+        this.radius = radius;
+        this.height = height;
+    }
+    getVolume() {
+        area = super.getArea();
+        volume = (1 / 3) * area * this.height;
+        return volume;
+    }
+    getArea() {
+        l = Math.sqrt(this.radius ** 2 + this.height ** 2);
+        fullArea = super.getArea() + Math.PI * this.radius * l;
+        return fullArea;
+    }
+}

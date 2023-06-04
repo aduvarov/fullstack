@@ -22,6 +22,7 @@ class Truck extends Car {
     model;
 
     constructor(model, maxCargo) {
+        super(model);
         this.model = model;
         this.maxCargo = maxCargo;
     }

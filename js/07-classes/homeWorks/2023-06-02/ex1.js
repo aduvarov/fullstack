@@ -15,7 +15,7 @@ class Car {
     }
 }
 
-class Truck {
+class Truck extends Car {
     weight;
     loadCargo(weight) {
         if (weight > 1000) {
@@ -24,6 +24,9 @@ class Truck {
             this.weight = weight;
             console.log(`В грузовик загружено ${this.weight}кг.`);
         }
+    }
+    move() {
+        console.log(`Грузовик движется со скоростью 50 км/час.`);
     }
 }
 
@@ -36,3 +39,26 @@ v2.loadCargo(1500);
 v2.loadCargo(990);
 v2.start();
 v2.move();
+
+class BaseClass {
+    method() {
+        console.log('BaseClass.Method');
+    }
+}
+
+class DerivedClass extends BaseClass {
+    method() {
+        super.method(); // Обращение к методу method из родительского класса
+        // по сути обращение к прототипу функции конструктора BaseClass
+        console.log('DerivedClass.Method');
+    }
+}
+
+let instance1 = new BaseClass();
+let instance2 = new DerivedClass();
+
+console.log(`instance1`);
+instance1.method();
+
+console.log(`instance2`);
+instance2.method();
