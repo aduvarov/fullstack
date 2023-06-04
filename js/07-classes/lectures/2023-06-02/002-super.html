@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>super</title>
+    </head>
+    <body>
+        <script>
+            class BaseClass {
+                constructor() {
+                    this.x = 50;
+                    this.y = 100;
+                }
+                method1() {
+                    console.log('Method from BaseClass');
+                }
+            }
+
+            class DerivedClass extends BaseClass {
+                constructor(value) {
+                    super(); // Конструктор производного класса должен всегда вызывать конструктор базового класса
+                    this.derivedClassProperty = value;
+                }
+
+                method2() {
+                    console.log('Method from DerivedClass');
+                }
+            }
+
+            let obj1 = new BaseClass();
+
+            // Когда запускается конструктор производного класса, пустой объект не устанавливается в качестве котекста
+            // эту задачу выполняет конструктор базового класса. Для того, чтобы контекст в производном классе указывал
+            // на новый создаваемый объект, необходимо вызывать конструктор базового класса через super()
+            let obj2 = new DerivedClass(10);
+
+            obj1.method1();
+            obj2.method1();
+            obj2.method2();
+        </script>
+    </body>
+</html>

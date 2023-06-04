@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Классы наследования</title>
+    </head>
+    <body>
+        <script>
+            // Базовый класс Animal
+            class Animal {
+                constructor() {
+                    this.voice = '';
+                }
+                sleep() {
+                    console.log('животное спит');
+                }
+                eat() {
+                    console.log('животное ест');
+                }
+            }
+
+            // Производный класс Dog.
+            // Класс Dog наследуется от класса Animal, это означает, что методы и свойства класса Animal будут доступны в классе
+            // Dog, при этом дочерний класс Dog может заместить работу методов, которые получены по наследству, а также
+            // добавить свои методы
+            class Dog extends Animal {
+                constructor() {
+                    super();
+                }
+                eat() {
+                    console.log('Собака ест мясо');
+                }
+            }
+
+            // Класс Cow расширяет класс Animal
+            class Cow extends Animal {
+                eat() {
+                    console.log('Корова ест траву');
+                }
+            }
+
+            let dog = new Dog();
+
+            console.dir(dog);
+            let cow = new Cow();
+            console.dir(cow);
+            dog.eat();
+            dog.sleep();
+            console.log('-------------------');
+            cow.eat();
+            cow.sleep();
+
+            let ferma = [new Cow(), new Cow(), new Cow(), new Dog(), new Dog()];
+
+            for (let i = 1; i <= 100; i++) {
+                ferma.push(new Cow());
+            }
+
+            // ferma.forEach(animal => {
+            //     animal.eat();
+            // });
+
+            ferma[50].eat();
+        </script>
+    </body>
+</html>
