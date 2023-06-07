@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Статичекие свойства класса</title>
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            // class CoffeeMachine {
+            //     static count = 0;
+
+            //     constructor() {
+            //         this.waterAmount = 0;
+            //         this.power = 100;
+            //         CoffeeMachine.count++;
+            //     }
+            //     loadWater(value){}
+            // }
+            // let cm1 = new CoffeeMachine();
+            // let cm2 = new CoffeeMachine();
+
+            // let magazin = [];
+            // for (let i = 0; i < 100; i++) {
+            //     magazin.push(new CoffeeMachine());
+            // }
+
+            class MyClass {
+                property1;
+                static property2;
+            }
+
+            let m1 = new MyClass();
+            let m2 = new MyClass();
+
+            m1.property1 = 10;
+            m2.property1 = 20;
+
+            MyClass.property2 = 100;
+
+            console.log(m1.property1); // 10
+            console.log(m2.property1); // 20
+            console.log(m1.property2); // undefined
+            console.log(m2.property2); // undefined
+            console.log(MyClass.property2); // 100
+        </script>
+    </body>
+</html>
