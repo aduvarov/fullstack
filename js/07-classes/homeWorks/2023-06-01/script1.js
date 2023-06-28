@@ -34,7 +34,8 @@ class Book {
     }
     set numPages(value) {
         console.log(`Вырывали из этой книги ${value} страниц.`);
-        this._numPages = value;
+        this._numPages = this._numPages - value;
+        this._remPages = this._remPages - value;
     }
     get year() {
         console.log(this._year);
