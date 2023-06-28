@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Наследование и конструкор</title>
+    </head>
+    <body>
+        <script>
+            class Animal {
+                // Конструктора базового класса
+                constructor(name) {
+                    this.name = name;
+                }
+                sleep() {
+                    console.log(this.name + ' спит.');
+                }
+                eat() {
+                    console.log(this.name + ' ест.');
+                }
+            }
+
+            class Dog extends Animal {
+                // Если производный класс содержит конструктор, то перед тем, как в нём произведётся первое
+                // обращение к контексту (this) и до завешения тела конструктора должен быть вызван конструктор
+                // базового класса, через ключевое слово super().
+                // При этом, свойства для производного класса, полученые по наследству, будут содержать значения
+                // инициализированные конструктором родительского класса, вызванного через super.
+                // Если в классе нет конструктора, то автоматически создаётся такой пустой конструктор.
+                // Конструктор, который все полученные аргументы передаст конструктору базового класса.
+
+                // constructor(...arg){
+                //    super(...arg);
+                // }
+                eat() {
+                    console.log(`Собака ${this.name} ест мясо`);
+                }
+            }
+
+            class Cow extends Animal {
+                eat() {
+                    console.log(`Корова ${this.name} ест траву.`);
+                }
+            }
+
+            let a1 = new Dog('Шарик');
+            let a2 = new Cow('Бурёнка');
+            a1.eat();
+            a1.sleep();
+            console.log('------------------');
+
+            a2.eat();
+            a2.sleep();
+            console.log('------------------');
+
+            let animals = [new Dog('Шарик'), new Cow('Бурёнка')];
+
+            animals.forEach(animal => {
+                animal.eat();
+                animal.sleep();
+            });
+        </script>
+    </body>
+</html>

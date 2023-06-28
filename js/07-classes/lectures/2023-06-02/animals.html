@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoo</title>
+    </head>
+    <body>
+        <script>
+            'use strict';
+
+            class Animal {
+                constructor(nickname) {
+                    this.nickname = nickname;
+                }
+            }
+
+            class Cat extends Animal {
+                constructor(nickname, voice) {
+                    super(nickname);
+                    this.voice = voice;
+                }
+            }
+            class Tiger extends Cat {}
+            class Lion extends Cat {}
+
+            class Monkey extends Animal {}
+            class Macaques extends Monkey {}
+            class Gorillas extends Monkey {}
+        </script>
+    </body>
+</html>
