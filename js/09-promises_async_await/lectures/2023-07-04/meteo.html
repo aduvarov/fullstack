@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./meteo.js" defer></script>
+        <title>Прогноз погоды</title>
+    </head>
+    <body>
+        <div class="controller">
+            <label>Город: <input type="text" class="city" value="Минск" /></label>
+            <label>Страна: <input type="text" class="country" /></label>
+            <button class="getWeather">Узнать погоду</button>
+        </div>
+        <div class="results">
+            <h1 class="results__headerCity"></h1>
+            <h2 class="results__headerCountry"></h2>
+            <div class="results__currentWeather">
+                <h2>Текущая погода</h2>
+                <div class="results__currentWeatherData"></div>
+            </div>
+            <div class="results__todaytWeather">
+                <h2>Погода сегодня</h2>
+                <div class="results__todaytWeatherData">
+                    <div class="results__day"></div>
+                    <div class="results__night"></div>
+                </div>
+            </div>
+            <div class="results__threedayWeather">
+                <h2>Погода завтра</h2>
+                <div class="results__threedayWeatherData">
+                    <div class="results__tomorrow"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
