@@ -1,0 +1,15 @@
+fieldset {
+    border-radius: 50px;
+    width: 300px;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+}
+
+.submit__btn {
+    border-radius: 50px;
+    width: 150px;
+    height: 35px;
+}
