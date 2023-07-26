@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 5px;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 10px;
+}
+
+.header {
+    color: red;
+    width: 100%;
+}
+
+.workTable {
+    border: 1px solid black;
+    padding: 10px;
+    width: 25%;
+}
+
+.tables,
+.products,
+.ovens {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.product {
+    height: 100px;
+    width: 20%;
+    border: 1px solid black;
+}
+
+.oven {
+    border: 1px solid black;
+    width: 25%;
+    height: 100px;
+    /* height: 100%; */
+}
+
+.error {
+    color: red;
+}
