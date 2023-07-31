@@ -68,8 +68,6 @@ async function makePizza(povar, type) {
         povar.workTable.innerHTML += `<p>${result}</p>`;
 
         result = await bake(result, povar);
-
-        povar.workTable.innerHTML += `<h4>${result}</h4>`;
     } catch (error) {
         povar.workTable.innerHTML += `<h4 class="error">${error}</h4>`;
     }

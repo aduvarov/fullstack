@@ -13,6 +13,7 @@ export function bake(halfPizza, povar) {
                 () => {
                     oven.innerHTML = '';
                     ovens[indexOven] = null;
+                    povar.workTable.innerHTML += `<h4>${result}</h4>`;
                     resolve(result);
                 },
                 rnd(10000, 15000),
