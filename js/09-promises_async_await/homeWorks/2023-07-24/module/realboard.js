@@ -1,0 +1,1 @@
+export let realBoard = Array(13).fill(null)
