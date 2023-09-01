@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.btn {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
