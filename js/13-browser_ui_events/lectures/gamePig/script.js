@@ -3,6 +3,12 @@
 let dice = document.querySelector('.controller__dice-btn');
 let stopPlay = document.querySelector('.controller__stop');
 
+let winner = document.querySelector('.wrapper__winner');
+let scoresPlayer1 = document.querySelector('.scores__player1');
+let scoresPlayer2 = document.querySelector('.scores__player2');
+let closeMd = document.querySelector('.wrapper__close');
+let modalwindow = document.querySelector('.modalwindow');
+
 let player1 = document.querySelector('.player1');
 let player2 = document.querySelector('.player2');
 let totalScore1 = document.querySelector('.player1__total-score');
@@ -25,7 +31,14 @@ cubeBoard.addEventListener('click', () => {
     if (totalScore2 < 0) {
         totalScore2.innerHTML = 0;
     }
-    resultDice = randomInteger(0, 6);
+    if (player === 0) {
+        player2.classList.add('blur');
+        player1.classList.remove('blur');
+    } else {
+        player1.classList.add('blur');
+        player2.classList.remove('blur');
+    }
+    resultDice = randomInteger(1, 6);
     cube.innerHTML = resultDice;
     if (resultDice === 1) {
         if (player === 0 && totalScore[player] !== 0) {
@@ -50,8 +63,11 @@ stopPlay.addEventListener('click', () => {
     if (player === 0) {
         if (totalScore[player] < score[player]) {
             totalScore[player] = 0;
+            winner.innerHTML += ' Player1';
+            scoresPlayer1.innerHTML += ` ${totalScore[0]}`;
+            scoresPlayer2.innerHTML += ` ${totalScore[1]}`;
+            modalwindow.classList.remove('vanish');
             totalScore1.innerHTML = totalScore[player];
-            player1.classList.add('blur');
             cubeBoard.removeEventListener('click', cubeBoard, false);
         } else {
             totalScore[player] -= score[player];
@@ -62,8 +78,11 @@ stopPlay.addEventListener('click', () => {
     } else {
         if (totalScore[player] < score[player]) {
             totalScore[player] = 0;
+            winner.innerHTML += ' Player2';
+            scoresPlayer1.innerHTML += ` ${totalScore[0]}`;
+            scoresPlayer2.innerHTML += ` ${totalScore[1]}`;
+            modalwindow.classList.remove('vanish');
             totalScore2.innerHTML = totalScore[player];
-            player2.classList.add('blur');
             cubeBoard.removeEventListener('click', cubeBoard, false);
         } else {
             totalScore[player] -= score[player];
@@ -86,6 +105,10 @@ newGame.addEventListener('click', () => {
     player = 0;
     player1.classList.remove('blur');
     player2.classList.remove('blur');
+});
+
+closeMd.addEventListener('click', () => {
+    modalwindow.classList.add('vanish');
 });
 
 function randomInteger(min, max) {

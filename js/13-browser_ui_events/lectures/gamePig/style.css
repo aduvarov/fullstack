@@ -131,6 +131,7 @@ body {
     align-self: center;
     height: 90%;
     width: 30%;
+    transition: all 2s ease-out;
 }
 
 .controller__wrapper,
@@ -142,8 +143,8 @@ body {
     width: 500px;
     height: 126px;
     background: #e4ff1a;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .controller__dice-btn,
@@ -156,6 +157,13 @@ body {
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
+    transition: linear s;
+}
+
+.controller__wrapper:hover,
+.controller__stop:hover,
+.footer:hover {
+    box-shadow: inset 0 0 0 3px #53ea93;
 }
 .controller__board {
     display: flex;
@@ -194,6 +202,7 @@ body {
     flex-direction: column;
     height: 46px;
     background-color: #ff5714;
+    cursor: pointer;
 }
 .footer__newgame {
     text-align: center;
@@ -219,4 +228,90 @@ body {
 
 .blur {
     filter: blur(5px);
+}
+
+.modalwindow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    border: solid 1px #000000;
+    opacity: 0.9;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 8px;
+    opacity: 1;
+    background-color: #53ea93;
+}
+
+.wrapper__scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    padding-top: 25px;
+    width: 100%;
+    display: flex;
+
+    justify-content: space-around;
+}
+.wrapper__player {
+    padding: 15px;
+    width: 50%;
+}
+.scores {
+    border-left: 1px solid black;
+}
+.player {
+    width: 90%;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+.wrapper__player1,
+.wrapper__player2 {
+    border: 1px solid black;
+    border-radius: 80px;
+}
+
+.wrapper__winner {
+    font-size: 24px;
+    padding: 20px;
+}
+
+.modalwindow__scores {
+    width: inherit;
+    display: flex;
+}
+
+.scores__player {
+    padding: 15px;
+    width: 50%;
+}
+
+.wrapper__close {
+    border-radius: 20px;
+    border: 1px solid black;
+    cursor: pointer;
+    padding: 20px;
+    width: inherit;
+    font-size: 24px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.vanish {
+    display: none;
 }
