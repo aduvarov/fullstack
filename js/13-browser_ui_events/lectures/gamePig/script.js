@@ -19,7 +19,7 @@ let newGame = document.querySelector('.footer');
 let cubeBoard = document.querySelector('.controller__wrapper');
 let cube = document.querySelector('.controller__dice-item');
 
-let totalScore = [100, 100];
+let totalScore = [1, 100];
 let score = [0, 0];
 let resultDice = 0;
 let player = 0;
